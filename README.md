@@ -33,4 +33,4 @@ Copy the `Students_Import/` folder (if named `Students_Import-master`, rename it
 
 Go to _School Setup > School Configuration > Modules_ and click "Activate".
 
-Requires RosarioSIS 2.9.4+
+Requires RosarioSIS 2.9+
