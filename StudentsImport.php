@@ -146,9 +146,64 @@ elseif ( $_REQUEST['modfunc'] === 'upload' )
 	{
 		// Form.
 		echo '<form action="Modules.php?modname=' . $_REQUEST['modname'] .
-			'&modfunc=import" method="POST">';
+			'&modfunc=import" method="POST" class="import-students-form">';
 
-		DrawHeader( '', SubmitButton( dgettext( 'Students_Import', 'Import Students' ) ) );
+		DrawHeader(
+			'<a href="Modules.php?modname=' . $_REQUEST['modname'] . '&modfunc=upload">' .
+				dgettext( 'Students_Import', 'Reset form' ) . '</a>',
+			SubmitButton(
+				dgettext( 'Students_Import', 'Import Students' ),
+				'',
+				' class="import-students-button"'
+			)
+		);
+		?>
+		<script>
+		$(function(){
+			$('.import-students-form').submit(function(){
+
+				var alertTxt = <?php echo json_encode( dgettext(
+						'Students_Import',
+						'Are you absolutely ready to import students? Make sure you have backed up your database!'
+					) ); ?>;
+
+				// Alert.
+				if ( ! window.confirm( alertTxt ) ) return false;
+
+				var $buttons = $('.import-students-button'),
+					buttonTxt = $buttons.val(),
+					seconds = 5,
+					stopButtonHTML = <?php echo json_encode( SubmitButton(
+						dgettext( 'Students_Import', 'Stop' ),
+						'',
+						'class="stop-button"'
+					) ); ?>;
+
+				$buttons.css('pointer-events', 'none').attr('disabled', true).val( buttonTxt + ' ... ' + seconds );
+
+				var countdown = setInterval( function(){
+					if ( seconds == 0 ) {
+						clearInterval( countdown );
+						$('.import-students-form').off('submit').submit();
+						return;
+					}
+
+					$buttons.val( buttonTxt + ' ... ' + --seconds );
+				}, 1000 );
+
+				// Insert stop button.
+				$( stopButtonHTML ).click( function(){
+					clearInterval( countdown );
+					$('.stop-button').remove();
+					$buttons.css('pointer-events', '').attr('disabled', false).val( buttonTxt );
+					return false;
+				}).insertAfter( $buttons );
+
+				return false;
+			});
+		});
+		</script>
+		<?php
 
 		// Import first row? (generally column names).
 		DrawHeader( CheckboxInput(
@@ -342,6 +397,10 @@ elseif ( $_REQUEST['modfunc'] === 'upload' )
 
 		echo '</table>';
 
-		echo '<br /><div class="center">' . SubmitButton( dgettext( 'Students_Import', 'Import Students' ) ) . '</div></form>';
+		echo '<br /><div class="center">' . SubmitButton(
+			dgettext( 'Students_Import', 'Import Students' ),
+			'',
+			' class="import-students-button"'
+		) . '</div></form>';
 	}
 }

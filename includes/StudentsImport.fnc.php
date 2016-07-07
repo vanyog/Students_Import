@@ -231,7 +231,7 @@ function CSVImport( $csv_file_path )
 	array_rwalk( $students, 'strip_tags' );
 	array_rwalk( $enrollment, 'strip_tags' );
 
-	var_dump( $students, $enrollment ); //exit;
+	//var_dump( $students, $enrollment ); //exit;
 
 	$max = count( $students );
 
@@ -268,9 +268,6 @@ function CSVImport( $csv_file_path )
 
 		// INSERT Student.
 		_insertStudent( $student );
-
-		// INSERT addresse(s): Bus, Student, (Father, Mother, Guardian).
-		AddressesPeopleImport( $student, $addresses[ $i ], $people[ $i ] );
 
 		$students_imported++;
 	}
