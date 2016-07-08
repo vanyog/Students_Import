@@ -310,7 +310,8 @@ function _getGradeLevelID( $grade_title )
 
 		$grade_id = $grade_id[1]['ID'];
 	}
-	else
+
+	if ( ! isset( $grade_id ) )
 	{
 		// Do NOT fail, default to 1st grade level.
 		$grade_id = DBGet( DBQuery( "SELECT ID
@@ -545,8 +546,7 @@ function _checkFieldType( $value, $field_type )
 		$i;
 
 	// Check text and apparented fields.
-	if ( $field_type  == 'numeric'
-		|| $field_type  == 'text'
+	if ( $field_type  == 'text'
 		|| $field_type  == 'exports'
 		|| $field_type  == 'select'
 		|| $field_type  == 'autos'
@@ -622,6 +622,7 @@ function _checkMultiple( $multiple )
 
 /**
  * Detect separator of multiple values.
+ * Allowed separators: semi-colons (;) and pipes (|)
  *
  * @param string $multiple Multiple value.
  *
@@ -631,7 +632,7 @@ function _detectMultipleSeparator( $multiple )
 {
 	$separators = array(
 		';' => 0,
-		',' => 0,
+		'|' => 0,
 	);
 
 	foreach ( $separators as $separator => &$count )
