@@ -5,8 +5,8 @@ How is the CSV / Excel file data processed before it is imported into RosarioSIS
 ## All data
 [Trimmed](http://php.net/trim) (spaces are stripped), examples:
 
-- `  John ` => `John`
-- `  ` => empty value (= NULL)
+- "  John " => "John"
+- "  " => empty value (= NULL)
 
 ## Grade Levels
 
