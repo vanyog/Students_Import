@@ -247,6 +247,8 @@ function CSVImport( $csv_file_path )
 
 	for ( ; $i < $max; $i++ )
 	{
+		$student_sql = array();
+
 		$student = $students[ $i ];
 
 		if ( ! _checkStudent( $student ) )
@@ -264,10 +266,12 @@ function CSVImport( $csv_file_path )
 		unset( $student['GRADE_ID'] );
 
 		// INSERT Enrollment.
-		_insertStudentEnrollment( $student['STUDENT_ID'], $enrollment );
+		$student_sql[] = _insertStudentEnrollment( $student['STUDENT_ID'], $enrollment );
 
 		// INSERT Student.
-		_insertStudent( $student );
+		$student_sql[] = _insertStudent( $student );
+
+		DBQuery( implode( '', $student_sql ) );
 
 		$students_imported++;
 	}
@@ -487,6 +491,8 @@ function _getStudentID( $student_fields )
  * @see CSVImport()
  *
  * @param  array $student_fields Student Fields.
+ *
+ * @return string SQL INSERT
  */
 function _insertStudent( $student_fields )
 {
@@ -527,11 +533,9 @@ function _insertStudent( $student_fields )
 		}
 	}
 
-	$sql .= '(' . mb_substr( $fields, 0, -1 ) . ') values(' . mb_substr( $values, 0, -1 ) . ')';
+	$sql .= '(' . mb_substr( $fields, 0, -1 ) . ') values(' . mb_substr( $values, 0, -1 ) . ');';
 
-	DBQuery( $sql );
-
-	return $student_fields['STUDENT_ID'];
+	return $sql;
 }
 
 
@@ -772,6 +776,8 @@ function _formatLongInteger( $long_int )
  *
  * @param array  $student_id Student ID.
  * @param array  $enrollment Enrollment array: 'START_DATE','GRADE_ID','ENROLLMENT_CODE','NEXT_SCHOOL','CALENDAR_ID'.
+ *
+ * @return string SQL INSERT
  */
 function _insertStudentEnrollment( $student_id, $enrollment )
 {
@@ -800,9 +806,9 @@ function _insertStudentEnrollment( $student_id, $enrollment )
 		$enrollment['NEXT_SCHOOL'] . "','" .
 		$enrollment['CALENDAR_ID'] . "'";
 
-	$sql .= '(' . $fields . ') values(' . $values . ')';
+	$sql .= '(' . $fields . ') values(' . $values . ');';
 
-	DBQuery( $sql );
+	return $sql;
 }
 
 
