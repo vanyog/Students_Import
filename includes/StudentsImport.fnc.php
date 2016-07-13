@@ -189,7 +189,7 @@ function CSVImport( $csv_file_path )
 
 	$students = $enrollment = array();
 
-	$columns_values = array_flip( $_REQUEST['values'] );
+	$columns_values = my_array_flip( $_REQUEST['values'] );
 
 	$delimiter = DetectCSVDelimiter( $csv_file_path );
 
@@ -212,7 +212,10 @@ function CSVImport( $csv_file_path )
 		{
 			if ( isset( $columns_values[ $col ] ) )
 			{
-				$students[ $row ][ $columns_values[ $col ] ] = $data[ $col ];
+				foreach ( $columns_values[ $col ] as $column )
+				{
+					$students[ $row ][ $column ] = $data[ $col ];
+				}
 			}
 		}
 
@@ -916,3 +919,25 @@ function _makeFieldTypeTooltip( $type, $extra_text = '' )
 
 	return $tooltip_text ? '<div class="tooltip"><i>' . $tooltip_text . $extra_text . '</i></div>' : '';
 }
+
+
+/**
+ * My array_flip()
+ * Handles multiple occurrences of a value
+ *
+ * @param  array $array Input array.
+ *
+ * @return array        Flipped array.
+ */
+function my_array_flip( $array )
+{
+	$flipped = array();
+
+	foreach ( $array as $key => $value )
+	{
+		$flipped[ $value ][] = $key;
+	}
+
+	return $flipped;
+}
+
