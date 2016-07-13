@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Students Import Module for RosarioSIS.\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-07 16:50-0500\n"
-"PO-Revision-Date: 2016-07-07 16:54-0500\n"
+"POT-Creation-Date: 2016-07-13 14:10-0500\n"
+"PO-Revision-Date: 2016-07-13 14:10-0500\n"
 "Last-Translator: François Jacquet <info@rosariosis.org>\n"
 "Language-Team: RosarioSIS <info@rosariosis.org>\n"
 "Language: es_ES\n"
@@ -20,184 +20,189 @@ msgstr ""
 msgid "Students Import"
 msgstr "Importación de Estudiantes"
 
-#: StudentsImport.php:42 StudentsImport.php:64
+#: StudentsImport.php:45 StudentsImport.php:67
 msgid "Cannot open file."
 msgstr "El archivo no se puede abrir."
 
-#: StudentsImport.php:72
+#: StudentsImport.php:75
 #, php-format
 msgid "%s students were imported."
 msgstr "%s estudiantes han sido importados."
 
-#: StudentsImport.php:121
+#: StudentsImport.php:124
 msgid "Database Backup"
 msgstr ""
 
-#: StudentsImport.php:125
+#: StudentsImport.php:128
 #, php-format
 msgid "Maximum file size: %01.0fMb"
 msgstr ""
 
-#: StudentsImport.php:127
+#: StudentsImport.php:130
 msgid "Select CSV or Excel file"
 msgstr "Seleccionar archivo CSV o Excel"
 
-#: StudentsImport.php:129
+#: StudentsImport.php:132
 msgid "Submit"
 msgstr ""
 
-#: StudentsImport.php:153
-msgid "Reset form"
-msgstr "Restablecer formulario"
+#: StudentsImport.php:160
+#, php-format
+msgid "%s rows"
+msgstr "%s líneas"
 
-#: StudentsImport.php:155 StudentsImport.php:401
+#: StudentsImport.php:162 StudentsImport.php:411
 msgid "Import Students"
 msgstr "Importar Estudiantes"
 
-#: StudentsImport.php:167
+#: StudentsImport.php:174
 msgid ""
 "Are you absolutely ready to import students? Make sure you have backed up "
 "your database!"
 msgstr ""
-"Está listo para importar los estudiantes? Asegurese de haber hecho un "
-"backup de la base de datos!"
+"Está listo para importar los estudiantes? Asegurese de haber hecho un backup "
+"de la base de datos!"
 
-#: StudentsImport.php:177
+#: StudentsImport.php:184
 msgid "Stop"
 msgstr "Pare"
 
-#: StudentsImport.php:212
+#: StudentsImport.php:219
 msgid "Import first row"
 msgstr "Importar la primera línea"
 
-#: StudentsImport.php:225
+#: StudentsImport.php:224
+msgid "Reset form"
+msgstr "Restablecer formulario"
+
+#: StudentsImport.php:235
 msgid "Student Fields"
 msgstr ""
 
-#: StudentsImport.php:228
+#: StudentsImport.php:238
 msgid "First Name"
 msgstr ""
 
-#: StudentsImport.php:232
+#: StudentsImport.php:242
 msgid "Middle Name"
 msgstr ""
 
-#: StudentsImport.php:236
+#: StudentsImport.php:246
 msgid "Last Name"
 msgstr ""
 
-#: StudentsImport.php:241
+#: StudentsImport.php:251
 msgid "IDs are automatically generated if you select \"N/A\"."
 msgstr "Los IDs son automaticamente generados si selecciona \"N/A\"."
 
-#: StudentsImport.php:245
+#: StudentsImport.php:255
 #, php-format
 msgid "%s ID"
 msgstr ""
 
-#: StudentsImport.php:249
+#: StudentsImport.php:259
 msgid "Username"
 msgstr ""
 
-#: StudentsImport.php:253
+#: StudentsImport.php:263
 msgid "Password"
 msgstr ""
 
-#: StudentsImport.php:293
+#: StudentsImport.php:303
 msgid "Enrollment"
 msgstr ""
 
-#: StudentsImport.php:312
+#: StudentsImport.php:322
 msgid "Grade Level"
 msgstr ""
 
-#: StudentsImport.php:329
+#: StudentsImport.php:339
 msgid "Default"
 msgstr ""
 
-#: StudentsImport.php:339
+#: StudentsImport.php:349
 msgid "Calendar"
 msgstr ""
 
-#: StudentsImport.php:352
+#: StudentsImport.php:362
 msgid "Next grade at current school"
 msgstr ""
 
-#: StudentsImport.php:353
+#: StudentsImport.php:363
 msgid "Retain"
 msgstr ""
 
-#: StudentsImport.php:354
+#: StudentsImport.php:364
 msgid "Do not enroll after this school year"
 msgstr ""
 
-#: StudentsImport.php:366
+#: StudentsImport.php:376
 msgid "Rolling / Retention Options"
 msgstr ""
 
-#: StudentsImport.php:391
+#: StudentsImport.php:401
 msgid "Attendance Start Date this School Year"
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:406
+#: includes/StudentsImport.fnc.php:411
 msgid "No names were found."
 msgstr "No se encontró ningún nombre."
 
-#: includes/StudentsImport.fnc.php:426
+#: includes/StudentsImport.fnc.php:431
 msgid ""
 "A user with that username already exists. Choose a different username and "
 "try again."
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:568
+#: includes/StudentsImport.fnc.php:572
 msgid "Please enter valid Numeric data."
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:577
+#: includes/StudentsImport.fnc.php:581
 msgid "Some dates were not entered correctly."
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:870
+#: includes/StudentsImport.fnc.php:877
 msgid "Pull-Down"
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:871
+#: includes/StudentsImport.fnc.php:878
 msgid "Auto Pull-Down"
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:872
+#: includes/StudentsImport.fnc.php:879
 msgid "Edit Pull-Down"
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:873
+#: includes/StudentsImport.fnc.php:880
 msgid "Text"
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:874
+#: includes/StudentsImport.fnc.php:881
 msgid "Checkbox"
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:875
+#: includes/StudentsImport.fnc.php:882
 msgid "Coded Pull-Down"
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:876
+#: includes/StudentsImport.fnc.php:883
 msgid "Export Pull-Down"
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:877
+#: includes/StudentsImport.fnc.php:884
 msgid "Number"
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:878
+#: includes/StudentsImport.fnc.php:885
 msgid "Select Multiple from Options"
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:879
+#: includes/StudentsImport.fnc.php:886
 msgid "Date"
 msgstr ""
 
-#: includes/StudentsImport.fnc.php:880
+#: includes/StudentsImport.fnc.php:887
 msgid "Long Text"
 msgstr ""
 

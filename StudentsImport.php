@@ -22,6 +22,9 @@ if ( $_REQUEST['modfunc'] === 'upload' )
 	if ( ! isset( $_SESSION['StudentsImport.php']['csv_file_path'] )
 		|| ! $_SESSION['StudentsImport.php']['csv_file_path'] )
 	{
+		// Save original file name.
+		$_SESSION['StudentsImport.php']['original_file_name'] = $_FILES['students-import-file']['name'];
+
 		// Upload CSV file.
 		$students_import_file_path = FileUpload(
 			'students-import-file',
@@ -148,9 +151,13 @@ elseif ( $_REQUEST['modfunc'] === 'upload' )
 		echo '<form action="Modules.php?modname=' . $_REQUEST['modname'] .
 			'&modfunc=import" method="POST" class="import-students-form">';
 
+		$rows_number = file( $_SESSION['StudentsImport.php']['csv_file_path'] );
+
+		$rows_number = count( $rows_number );
+
 		DrawHeader(
-			'<a href="Modules.php?modname=' . $_REQUEST['modname'] . '&modfunc=upload">' .
-				dgettext( 'Students_Import', 'Reset form' ) . '</a>',
+			$_SESSION['StudentsImport.php']['original_file_name'] . ': ' .
+				sprintf( dgettext( 'Students_Import', '%s rows' ), $rows_number ),
 			SubmitButton(
 				dgettext( 'Students_Import', 'Import Students' ),
 				'',
@@ -207,12 +214,15 @@ elseif ( $_REQUEST['modfunc'] === 'upload' )
 
 		// Import first row? (generally column names).
 		DrawHeader( CheckboxInput(
-			'',
-			'import-first-row',
-			dgettext( 'Students_Import', 'Import first row' ),
-			'',
-			true
-		) );
+				'',
+				'import-first-row',
+				dgettext( 'Students_Import', 'Import first row' ),
+				'',
+				true
+			),
+			'<a href="Modules.php?modname=' . $_REQUEST['modname'] . '&modfunc=upload">' .
+				dgettext( 'Students_Import', 'Reset form' ) . '</a>'
+		);
 
 		// Premium: Custom date format (update tooltips on change), may be necessary for Japan: YY-MM-DD?
 		// Premium: Custom checkbox checked format (update tooltips on change).

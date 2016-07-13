@@ -212,9 +212,9 @@ function CSVImport( $csv_file_path )
 		{
 			if ( isset( $columns_values[ $col ] ) )
 			{
-				foreach ( $columns_values[ $col ] as $column )
+				foreach ( (array) $columns_values[ $col ] as $field )
 				{
-					$students[ $row ][ $column ] = $data[ $col ];
+					$students[ $row ][ $field ] = $data[ $col ];
 				}
 			}
 		}
