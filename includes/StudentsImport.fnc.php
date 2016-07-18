@@ -586,7 +586,7 @@ function _checkFieldType( $value, $field_type )
 	elseif ( $field_type == 'radio' )
 	{
 		// Return nothing if anything different than Y!
-		return $value === 'Y' ? $value : '';
+		return mb_strtolower( $value ) === mb_strtolower( 'Y' ) ? 'Y' : '';
 	}
 	// Check multiple.
 	elseif ( $field_type == 'multiple' )
