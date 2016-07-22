@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Students Import Module for RosarioSIS.\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-13 14:10-0500\n"
-"PO-Revision-Date: 2016-07-13 14:10-0500\n"
+"POT-Creation-Date: 2016-07-22 14:50-0500\n"
+"PO-Revision-Date: 2016-07-22 14:52-0500\n"
 "Last-Translator: François Jacquet <info@rosariosis.org>\n"
 "Language-Team: RosarioSIS <info@rosariosis.org>\n"
 "Language: es_ES\n"
@@ -51,7 +51,7 @@ msgstr ""
 msgid "%s rows"
 msgstr "%s líneas"
 
-#: StudentsImport.php:162 StudentsImport.php:411
+#: StudentsImport.php:162 StudentsImport.php:414
 msgid "Import Students"
 msgstr "Importar Estudiantes"
 
@@ -143,6 +143,11 @@ msgstr ""
 #: StudentsImport.php:401
 msgid "Attendance Start Date this School Year"
 msgstr ""
+
+#: StudentsImport.php:403
+msgid "If the date is left empty, students will not be enrolled (inactive)."
+msgstr ""
+"Si deja la fecha vacía, los estudiantes no estarán matriculados (inactivos)."
 
 #: includes/StudentsImport.fnc.php:411
 msgid "No names were found."

@@ -394,11 +394,14 @@ elseif ( $_REQUEST['modfunc'] === 'upload' )
 		}
 
 		echo '<tr><td>' .
-			_makeDateInput( 'START_DATE', '', false, 'enrollment' ) . ' - ' .
+			_makeDateInput( 'START_DATE', '', true, 'enrollment' ) . ' -<br />' .
 			_makeSelectInput(
 				'ENROLLMENT_CODE',
 				$options,
-				_( 'Attendance Start Date this School Year' ),
+				_( 'Attendance Start Date this School Year' )
+					. '<div class="tooltip"><i>' .
+					dgettext( 'Students_Import', 'If the date is left empty, students will not be enrolled (inactive).' ) .
+					'</i></div>',
 				'',
 				$no_chosen,
 				'enrollment'
