@@ -15,13 +15,19 @@ DESCRIPTION
 -----------
 Import Students from a CSV or Excel file.
 Easily bulk upload your Students database to RosarioSIS.
-This module adds a menu entry to the Students module.
+Import Students info (general & custom fields), enroll them & eventually create accounts.
+This module adds an entry to the Students menu.
 
 Includes Help.
-Translated in French & Spanish.
+Translated in [French](https://www.rosariosis.org/fr/students-import-module/) & [Spanish](https://www.rosariosis.org/es/students-import-module/).
 [Data processing reference](https://github.com/francoisjacquet/Students_Import/blob/master/DATA_PROCESSING.md).
 
-Premium module to import Addresses & Contacts & advanced features coming soon!
+[Premium module](https://www.rosariosis.org/students-import-module/#premium-module) features:
+
+- Import Addresses & Contacts (Father, Mother, Guardian...) and their information.
+- Import Addresses & People custom fields.
+- Generate generic Username & Password so Students can login.
+- Change the default value ("Y") recognized as checked state: for example, "Yes" (for your _Checkbox_ type custom fields).
 
 CONTENT
 -------

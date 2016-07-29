@@ -2,6 +2,11 @@
 
 How is the CSV / Excel file data processed before it is imported into RosarioSIS database?
 
+## Excel files
+
+Excel files are automatically converted to CSV format.
+Note: Only the first spreadsheet is saved.
+
 ## All data
 [Trimmed](http://php.net/trim) (spaces are stripped), examples:
 
