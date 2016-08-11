@@ -19,10 +19,10 @@ Import Students info (general & custom fields), enroll them & eventually create 
 This module adds an entry to the Students menu.
 
 Includes Help.
-Translated in French & Spanish.
+Translated in [French](https://www.rosariosis.org/fr/students-import-module/) & [Spanish](https://www.rosariosis.org/es/students-import-module/).
 [Data processing reference](https://github.com/francoisjacquet/Students_Import/blob/master/DATA_PROCESSING.md).
 
-Premium module features (coming soon):
+[Premium module](https://www.rosariosis.org/students-import-module/#premium-module) features:
 
 - Import Addresses & Contacts (Father, Mother, Guardian...) and their information.
 - Import Addresses & People custom fields.
