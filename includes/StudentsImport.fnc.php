@@ -863,8 +863,6 @@ function _makeSelectInput( $column, $options, $title, $extra = '', $chosen = tru
 		<?php $chosen_included = true;
 	endif;
 
-	$required = mb_strpos( $extra, 'required' ) !== false;
-
 	$chosen_class = $chosen ? ' class="chosen-select"' : '';
 
 	return SelectInput( '', $array . '[' . $column . ']', $title, $options, 'N/A', $extra . ' style="max-width:280px;"' . $chosen_class );
