@@ -32,3 +32,21 @@ In case you choose a _column of your file_, the detection is based on the Grade 
 - `2nd` => detected
 - `Random` => defaults to `Kindergarten`
 - empty value => defaults to `Kindergarten`
+
+## Contacts & Addresses (Premium)
+
+**Addresses** are first checked against existing ones based on the following fields:
+
+- Street
+- City (if any)
+- Zip code (if any)
+
+If an existing address is found in the database, it will be used (but not updated).
+
+**Contacts** (Persons) are first checked against existing ones based on the following fields:
+
+- First Name
+- Last Name
+- Middle Name (if any)
+
+If an existing contact / person is found in the database, it will be used (but not updated).
