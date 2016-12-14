@@ -200,7 +200,7 @@ function CSVImport( $csv_file_path )
 		$data = array_map( 'trim', $data );
 
 		// Import first row? (generally column names).
-		if ( $row === 0 && ! isset( $_REQUEST['import-first-row'] ) )
+		if ( $row === 0 && ! $_REQUEST['import-first-row'] )
 		{
 			$row++;
 
@@ -241,7 +241,7 @@ function CSVImport( $csv_file_path )
 	$i = $students_imported = 0;
 
 	// Import first row? (generally column names).
-	if ( ! isset( $_REQUEST['import-first-row'] ) )
+	if ( ! $_REQUEST['import-first-row'] )
 	{
 		$max++;
 

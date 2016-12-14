@@ -5,7 +5,7 @@ Students Import Module
 
 http://github.com/francoisjacquet/Students_Import
 
-Version 1.3 - July, 2016
+Version 1.4 - December, 2016
 
 Author François Jacquet
 
@@ -40,6 +40,6 @@ Copy the `Students_Import/` folder (if named `Students_Import-master`, rename it
 
 Go to _School Setup > School Configuration > Modules_ and click "Activate".
 
-Requires RosarioSIS 2.9+
+Requires RosarioSIS 2.9.12+
 
 Requires PHP `zip` extension installed.
