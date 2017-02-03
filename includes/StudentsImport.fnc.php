@@ -531,7 +531,14 @@ function _insertStudent( $student_fields )
 				continue;
 			}
 
-			$fields .= $field . ',';
+			if ( function_exists( 'DBEscapeIdentifier' ) ) // RosarioSIS 3.0+.
+			{
+				$fields .= DBEscapeIdentifier( $field ) . ',';
+			}
+			else
+			{
+				$fields .= '"' . $field . '",';
+			}
 
 			$values .= "'" . $value . "',";
 		}
