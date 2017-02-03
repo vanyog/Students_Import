@@ -537,7 +537,7 @@ function _insertStudent( $student_fields )
 			}
 			else
 			{
-				$fields .= '"' . $field . '",';
+				$fields .= '"' . mb_strtolower( $field ) . '",';
 			}
 
 			$values .= "'" . $value . "',";
