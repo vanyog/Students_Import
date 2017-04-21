@@ -18,5 +18,9 @@
 -- Data for Name: profile_exceptions; Type: TABLE DATA;
 --
 
-INSERT INTO profile_exceptions (profile_id, modname, can_use, can_edit) VALUES (
-1, 'Students_Import/StudentsImport.php', 'Y', 'Y');
+INSERT INTO profile_exceptions (profile_id, modname, can_use, can_edit)
+SELECT 1, 'Students_Import/StudentsImport.php', 'Y', 'Y'
+WHERE NOT EXISTS (SELECT profile_id
+	FROM profile_exceptions
+	WHERE modname='Students_Import/StudentsImport.php'
+	AND profile_id=1);

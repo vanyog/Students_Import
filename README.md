@@ -5,7 +5,7 @@ Students Import Module
 
 http://github.com/francoisjacquet/Students_Import
 
-Version 1.5 - February, 2017
+Version 1.6 - April, 2017
 
 Author François Jacquet
 
