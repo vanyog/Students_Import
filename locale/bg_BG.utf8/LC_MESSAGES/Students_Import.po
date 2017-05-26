@@ -1,0 +1,222 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Students Import Module for RosarioSIS.\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-22 14:52-0500\n"
+"PO-Revision-Date: 2017-05-26 18:29+0300\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: dgettext:2\n"
+"X-Poedit-Basepath: /var/www/github/Students_Import\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.0.2\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Menu.php:13 Menu.php:19
+msgid "Students Import"
+msgstr "Импортиране на студенти"
+
+#: StudentsImport.php:45 StudentsImport.php:67
+msgid "Cannot open file."
+msgstr "Не може да се отвори файла."
+
+#: StudentsImport.php:75
+#, php-format
+msgid "%s students were imported."
+msgstr "%s студенти бяха импортирани."
+
+#: StudentsImport.php:124
+msgid "Database Backup"
+msgstr "Архивиране на базата данни"
+
+#: StudentsImport.php:128
+#, php-format
+msgid "Maximum file size: %01.0fMb"
+msgstr "Максимален размер на файл: %01.0fMb"
+
+#: StudentsImport.php:130
+msgid "Select CSV or Excel file"
+msgstr "Избиране на CSV или файл от Excel"
+
+#: StudentsImport.php:132
+msgid "Submit"
+msgstr "Изпращане"
+
+#: StudentsImport.php:160
+#, php-format
+msgid "%s rows"
+msgstr "%s реда"
+
+#: StudentsImport.php:162 StudentsImport.php:414
+msgid "Import Students"
+msgstr "Импортиране на студенти"
+
+#: StudentsImport.php:174
+msgid ""
+"Are you absolutely ready to import students? Make sure you have backed up "
+"your database!"
+msgstr ""
+"Напълно ли сте готови да импортирате студенти? Уверете се, че сте "
+"архивирали базата данни!"
+
+#: StudentsImport.php:184
+msgid "Stop"
+msgstr "Стоп"
+
+#: StudentsImport.php:219
+msgid "Import first row"
+msgstr "Импортиране на първия ред"
+
+#: StudentsImport.php:224
+msgid "Reset form"
+msgstr "Нулиране на формуляра"
+
+#: StudentsImport.php:235
+msgid "Student Fields"
+msgstr "Полета данни на студентите"
+
+#: StudentsImport.php:238
+msgid "First Name"
+msgstr "Малко име"
+
+#: StudentsImport.php:242
+msgid "Middle Name"
+msgstr "Бащино име"
+
+#: StudentsImport.php:246
+msgid "Last Name"
+msgstr "Фамилно име"
+
+#: StudentsImport.php:251
+msgid "IDs are automatically generated if you select \"N/A\"."
+msgstr "Ид.номера ще се генерират автоматично, ако изберете “Н/З”."
+
+#: StudentsImport.php:255
+#, php-format
+msgid "%s ID"
+msgstr "%s Ид.Номера"
+
+#: StudentsImport.php:259
+msgid "Username"
+msgstr "Потребителско име"
+
+#: StudentsImport.php:263
+msgid "Password"
+msgstr "Парола"
+
+#: StudentsImport.php:303
+msgid "Enrollment"
+msgstr "Записване"
+
+#: StudentsImport.php:322
+msgid "Grade Level"
+msgstr "Ниво на обучение"
+
+#: StudentsImport.php:339
+msgid "Default"
+msgstr "По подразбиране"
+
+#: StudentsImport.php:349
+msgid "Calendar"
+msgstr "Календар"
+
+#: StudentsImport.php:362
+msgid "Next grade at current school"
+msgstr "Следващо ниво в това училище"
+
+#: StudentsImport.php:363
+msgid "Retain"
+msgstr "Отписване"
+
+#: StudentsImport.php:364
+msgid "Do not enroll after this school year"
+msgstr "Да не се запише след тази учебна година"
+
+#: StudentsImport.php:376
+msgid "Rolling / Retention Options"
+msgstr ""
+
+#: StudentsImport.php:401
+msgid "Attendance Start Date this School Year"
+msgstr "Дата на започване тази учебна година"
+
+#: StudentsImport.php:403
+msgid "If the date is left empty, students will not be enrolled (inactive)."
+msgstr ""
+"Ако датата се остави празна, студентите ще са незаписани (неактивни)."
+
+#: includes/StudentsImport.fnc.php:411
+msgid "No names were found."
+msgstr "Не са намерени имена."
+
+#: includes/StudentsImport.fnc.php:431
+msgid ""
+"A user with that username already exists. Choose a different username and "
+"try again."
+msgstr ""
+"Потребител с такова потребителско име вече съществува. Изберете друго "
+"потребителско име и опитайте отново."
+
+#: includes/StudentsImport.fnc.php:572
+msgid "Please enter valid Numeric data."
+msgstr "Моля, въведете валидно чесло."
+
+#: includes/StudentsImport.fnc.php:581
+msgid "Some dates were not entered correctly."
+msgstr "Някои дати не бяха въведени коректно."
+
+#: includes/StudentsImport.fnc.php:877
+msgid "Pull-Down"
+msgstr "Падащо меню"
+
+#: includes/StudentsImport.fnc.php:878
+msgid "Auto Pull-Down"
+msgstr "Падащо мено с добавяне"
+
+#: includes/StudentsImport.fnc.php:879
+msgid "Edit Pull-Down"
+msgstr "Падащо меню с редактиране"
+
+#: includes/StudentsImport.fnc.php:880
+msgid "Text"
+msgstr "Текст"
+
+#: includes/StudentsImport.fnc.php:881
+msgid "Checkbox"
+msgstr "Отметка"
+
+#: includes/StudentsImport.fnc.php:882
+msgid "Coded Pull-Down"
+msgstr ""
+
+#: includes/StudentsImport.fnc.php:883
+msgid "Export Pull-Down"
+msgstr ""
+
+#: includes/StudentsImport.fnc.php:884
+msgid "Number"
+msgstr "Число"
+
+#: includes/StudentsImport.fnc.php:885
+msgid "Select Multiple from Options"
+msgstr "Избиране няколко възможности"
+
+#: includes/StudentsImport.fnc.php:886
+msgid "Date"
+msgstr "Дата"
+
+#: includes/StudentsImport.fnc.php:887
+msgid "Long Text"
+msgstr "Дълъг текст"
+
+#~ msgid "CSV columns reference: see \"CSV_COLUMNS_REFERENCE\" file."
+#~ msgstr ""
+#~ "Referencia de columnas CSV: ver el archivo \"CSV_COLUMNS_REFERENCE\"."
+
+#~ msgid "The following required columns were not found in the CSV file: %s"
+#~ msgstr ""
+#~ "Las columnas requeridas no han sido encontradas en el archivo CSV: %s"
